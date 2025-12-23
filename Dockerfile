@@ -12,7 +12,8 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jdk
 WORKDIR /docker-blog-jpa-basic
 
-COPY --from=build /docker-blog-jpa-basic/target/*.jar docker-blog-jpa-basic.jar
+#COPY --from=build /docker-blog-jpa-basic/target/*.jar docker-blog-jpa-basic.jar
+COPY --from=build /docker-blog-jpa-basic/target/blog-0.0.1-SNAPSHOT-spring-boot.jar
 
 # 포트 노출
 EXPOSE 8080
