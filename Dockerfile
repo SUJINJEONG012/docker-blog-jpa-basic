@@ -13,11 +13,12 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # WAR 복사
-COPY --from=build /app/target/*.war app.war
+#COPY --from=build /app/target/*.war app.war
+# JAR 복사
+COPY --from=build /app/target/*.jar app.jar
 
 # 포트 노출
 EXPOSE 8080
-
 # Render 환경변수 PORT 대응
 ENV PORT 8080
 
