@@ -24,4 +24,4 @@ EXPOSE 8080
 ENV PORT 8080
 
 # 실행 명령어
-#ENTRYPOINT ["java", "-Dserver.port=${PORT}", "-jar", "blog-0.0.1-SNAPSHOT-spring-boot.jar"]
+ENTRYPOINT ["java", "-Dserver.port=${PORT}", "-jar", "blog-0.0.1-SNAPSHOT-spring-boot.jar"]
